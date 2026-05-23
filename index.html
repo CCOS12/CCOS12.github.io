@@ -176,13 +176,126 @@
 				display: none;
 			}
 
-			@media screen and (max-width: 640px) {
-				.name-form {
-					grid-template-columns: 1fr;
+			/* iPhone / small-screen layout */
+			@media screen and (max-width: 736px) {
+				html,
+				body {
+					width: 100%;
+					overflow-x: hidden;
+				}
+
+				body {
+					min-width: 0;
+				}
+
+				#wrapper {
+					width: 100%;
+					max-width: none;
+					padding: 0.75rem;
+				}
+
+				#main {
+					border-radius: 1rem;
+				}
+
+				.wedding-hero {
+					padding: 2.5rem 1rem 1.25rem 1rem;
+				}
+
+				.wedding-hero .kicker {
+					font-size: 0.68rem;
+					letter-spacing: 0.14em;
+					line-height: 1.5;
+				}
+
+				.wedding-hero h1 {
+					font-size: clamp(2rem, 12vw, 3rem);
+				}
+
+				section.main,
+				section.main.special {
+					padding: 1.25rem 1rem;
 				}
 
 				.reveal-card {
-					padding: 1.25rem;
+					width: 100%;
+					max-width: 100%;
+					padding: 1.25rem 1rem;
+					border-radius: 1.1rem;
+				}
+
+				.reveal-card .major h2 {
+					font-size: 1.25rem;
+					line-height: 1.25;
+				}
+
+				.name-form {
+					display: flex;
+					flex-direction: column;
+					gap: 0.85rem;
+				}
+
+				.name-form input,
+				.name-form button {
+					width: 100%;
+				}
+
+				.name-form input {
+					box-sizing: border-box;
+					min-height: 3.3rem;
+					font-size: 1rem;
+					text-align: center;
+				}
+
+				.name-form button {
+					min-height: 3.3rem;
+					padding: 0 1rem;
+					line-height: 3.3rem;
+				}
+
+				.reveal-area {
+					min-height: 190px;
+					margin-top: 1.5rem;
+				}
+
+				.reveal-line {
+					font-size: 1rem;
+					line-height: 1.5;
+				}
+
+				.final-question {
+					font-size: clamp(1.65rem, 9vw, 2.35rem);
+					line-height: 1.15;
+					word-wrap: break-word;
+				}
+
+				#errorMsg {
+					font-size: 0.95rem;
+					line-height: 1.45;
+				}
+
+				#footer {
+					padding: 1.5rem 1rem;
+					text-align: center;
+				}
+			}
+
+			/* Extra-tight phones such as older/smaller iPhones */
+			@media screen and (max-width: 380px) {
+				#wrapper {
+					padding: 0.5rem;
+				}
+
+				.wedding-hero {
+					padding-top: 2rem;
+				}
+
+				.reveal-card {
+					padding: 1rem 0.8rem;
+				}
+
+				.final-question {
+					font-size: 1.55rem;
 				}
 			}
 		</style>
